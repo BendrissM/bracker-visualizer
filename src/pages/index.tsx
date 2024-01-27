@@ -11,7 +11,7 @@ import axios from "axios";
 import { type InferGetServerSidePropsType } from "next";
 import Head from "next/head";
 
-const intervalMs = 5 * 1000;
+// const intervalMs = 5 * 1000;
 
 export async function getServerSideProps() {
   const queryClient = new QueryClient();
@@ -37,7 +37,7 @@ export default function Home({
       const response = await axios.get<Round[]>("/api/googleSheet");
       return response.data;
     },
-    refetchInterval: intervalMs,
+    // refetchInterval: intervalMs,
   });
 
   return (
