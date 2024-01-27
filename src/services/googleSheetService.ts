@@ -1,8 +1,9 @@
+import type { Round } from "@/types/Round";
 import { handleSpreadSheetApiResponse } from "@/utils";
-import { google, type sheets_v4 } from "googleapis";
+import { google } from "googleapis";
 
 export const getGoogleSheetData = async (): Promise<
-  sheets_v4.Schema$ValueRange["values"]
+  Round[]
 > => {
   try {
     const scopes = ["https://www.googleapis.com/auth/spreadsheets.readonly"];
@@ -27,7 +28,7 @@ export const getGoogleSheetData = async (): Promise<
       range: "E23:X46",
     });
 
-    return handleSpreadSheetApiResponse(response.data.values);
+    return handleSpreadSheetApiResponse(response.data.values as string[][]);
   } catch (err) {
     console.log(err);
   }
