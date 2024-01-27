@@ -13,6 +13,7 @@ export default {
       },
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
+        custom: ["Montserrat", "sans-serif"],
       },
     },
   },

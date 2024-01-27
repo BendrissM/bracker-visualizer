@@ -1,18 +1,51 @@
-import React from "react";
+import React, { type FC } from "react";
+import type { Round } from "@/types";
 
-const Round = () => {
+interface Props {
+  round: Round;
+}
+
+const RoundComponent: FC<Props> = ({ round }) => {
   return (
-    <div className="flex flex-col gap-4">
-      <h3 className="text-center text-4xl font-bold">0-0</h3>
-      <div className="rounded-xl bg-orange-500 p-2">
-        <div className="border-b-8" />
-        <div className="text-lg">
-          Learn more about Create T3 App, the libraries it uses, and how to
-          deploy it.
+    <div className="flex flex-1 flex-col gap-2">
+      {round.matchGroups.map((group) => (
+        <div className="flex w-full flex-col" key={group.id}>
+          <h3 className="text-center text-4xl font-bold text-white">
+            {group.id}
+          </h3>
+          <div
+            style={{ background: "#e8dcb5" }}
+            className="flex flex-col px-2 py-2"
+          >
+            <div className="border-b-8 border-black" />
+            {group.matches.map((match) => {
+              return (
+                <>
+                  <div className="mb-2 mt-2 flex flex-row justify-between">
+                    <span className="font-semibold">{match.name}</span>
+                    <span className="font-semibold">Place</span>
+                  </div>
+                  {match.players.map((player, idx) => {
+                    return (
+                      <div key={idx} className="flex flex-row justify-between">
+                        <span className="font-semibold">
+                          {player.name || "TBD"}
+                        </span>
+                        <span className="font-semibold text-center min-w-10">
+                          {player.place || "TBD"}
+                        </span>
+                      </div>
+                    );
+                  })}
+                  <div className="mt-2 border-b-8 border-black" />
+                </>
+              );
+            })}
+          </div>
         </div>
-      </div>
+      ))}
     </div>
   );
 };
 
-export default Round;
+export default RoundComponent;
