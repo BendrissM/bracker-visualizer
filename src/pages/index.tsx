@@ -48,7 +48,7 @@ export default function Home({
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="flex min-h-screen flex-col justify-end bg-hero-pattern bg-cover bg-repeat-round">
-        <div className="flex flex-row gap-12 py-3">
+        <div className="flex flex-row gap-12 pt-3 pb-12">
           <div className="flex w-full justify-center items-center gap-32 px-28">
             {data?.map((round, idx) => (
               <RoundComponent round={round} key={idx} />
