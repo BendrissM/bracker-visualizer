@@ -262,8 +262,8 @@ export const handleSpreadSheetApiResponse = (
                 place: googleSheetRows?.[16]?.[10] ?? "",
               },
               {
-                name: googleSheetRows?.[17]?.[5] ?? "",
-                place: googleSheetRows?.[17]?.[6] ?? "",
+                name: googleSheetRows?.[17]?.[9] ?? "",
+                place: googleSheetRows?.[17]?.[10] ?? "",
               },
             ],
           },
