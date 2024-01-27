@@ -16,5 +16,10 @@ export default {
       },
     },
   },
+  variants: {
+    extend: {
+      spacing: ["responsive", "hover", "focus", "active", "group-hover"],
+    },
+  },
   plugins: [],
 } satisfies Config;
