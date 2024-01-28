@@ -6,7 +6,8 @@ export default {
   theme: {
     extend: {
       backgroundImage: () => ({
-        "hero-pattern": "url('/background.png')",
+        "swiss-stage": "url('/background.png')",
+        "playoff-bracket": "url('/bracket-bg.png')",
       }),
       backgroundRepeat: {
         round: "round",

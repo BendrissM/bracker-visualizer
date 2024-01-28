@@ -1,6 +1,6 @@
 import type { Round } from "@/types/Round";
 
-export const handleSpreadSheetApiResponse = (
+export const handleSwissApiResponse = (
   googleSheetRows?: string[][],
 ): Round[] => {
   const firstRound: Round = {
