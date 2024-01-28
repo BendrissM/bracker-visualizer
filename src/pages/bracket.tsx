@@ -53,7 +53,7 @@ export default function Bracket({
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="bg-playoff-bracket flex min-h-screen flex-col justify-center bg-cover bg-repeat-round">
-        <div className="flex flex-row gap-12 pb-12 pt-3">
+        <div className="flex flex-row gap-12 pt-10">
           <div className="flex w-full items-center justify-center gap-16 px-12">
             {data?.map((round, idx) => (
               <RoundComponent round={round} key={idx} />

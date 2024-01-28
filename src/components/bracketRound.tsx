@@ -3,6 +3,8 @@ import type { Round } from "@/types";
 import type { SheetType } from "@/types/SheetType";
 import { isWinner } from "@/utils";
 import { mapPlacementText } from "./utils/mapPlacementText";
+import ReactCountryFlag from "react-country-flag";
+import { getCountryCode } from "./utils/getCountryCode";
 
 interface Props {
   round: Round<SheetType.BRACKET>;
@@ -35,6 +37,18 @@ const RoundComponent: FC<Props> = ({ round }) => {
                         className="mb-1 flex flex-row justify-between"
                       >
                         <span className="text-xl font-semibold">
+                          {getCountryCode(player.name) ? (
+                            <ReactCountryFlag
+                              countryCode={getCountryCode(player.name)}
+                              svg
+                              style={{
+                                width: "1.5em",
+                                height: "1em",
+                                marginRight: "0.5em",
+                                borderRadius: "0.25em",
+                              }}
+                            />
+                          ) : null}
                           {player.name || "TBD"}
                         </span>
                         <span
