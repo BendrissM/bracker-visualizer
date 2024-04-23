@@ -11,7 +11,7 @@ const Match = () => {
             <span className="text-2xl font-bold">Place</span>
           </div>
           <div className="flex justify-between">
-            <span className="font-smibold text-xl">
+            <span className="font-semibold text-xl">
               <ReactCountryFlag
                 countryCode="DE"
                 svg
@@ -24,12 +24,12 @@ const Match = () => {
               />
               Player 1
             </span>
-            <span className="font-smibold min-w-12 text-center text-xl text-green-700">
+            <span className="font-semibold min-w-12 text-center text-xl text-green-700">
               1st
             </span>
           </div>
           <div className="flex justify-between">
-            <span className="font-smibold text-xl">
+            <span className="font-semibold text-xl">
               <ReactCountryFlag
                 countryCode="DE"
                 svg
@@ -42,12 +42,12 @@ const Match = () => {
               />
               Player 1
             </span>
-            <span className="font-smibold min-w-12 text-center text-xl text-green-700">
+            <span className="font-semibold min-w-12 text-center text-xl text-green-700">
               2nd
             </span>
           </div>
           <div className="flex justify-between">
-            <span className="font-smibold text-xl">
+            <span className="font-semibold text-xl">
               <ReactCountryFlag
                 countryCode="DE"
                 svg
@@ -60,12 +60,12 @@ const Match = () => {
               />
               Player 1
             </span>
-            <span className="font-smibold min-w-12 text-center text-xl text-red-600">
+            <span className="font-semibold min-w-12 text-center text-xl text-red-600">
               3rd
             </span>
           </div>
           <div className="flex justify-between">
-            <span className="font-smibold text-xl">
+            <span className="font-semibold text-xl">
               <ReactCountryFlag
                 countryCode="DE"
                 svg
@@ -78,7 +78,7 @@ const Match = () => {
               />
               Player 1
             </span>
-            <span className="font-smibold min-w-12 text-center text-xl text-red-600">
+            <span className="font-semibold min-w-12 text-center text-xl text-red-600">
               4th
             </span>
           </div>
