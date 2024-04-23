@@ -44,7 +44,7 @@ export default function Home({
         <meta name="description" content="created by benoxy" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="flex min-h-screen w-full bg-green-600">
+      <main className="flex min-h-screen w-full bg-transparent">
         <div className="flex w-full flex-row gap-12">
           <div className="flex w-full items-center justify-center gap-[5.5rem]">
             <Group />
