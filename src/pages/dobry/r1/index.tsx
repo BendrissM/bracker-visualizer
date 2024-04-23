@@ -44,7 +44,7 @@ export default function Home({
         <meta name="description" content="created by benoxy" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="flex min-h-screen w-full bg-transparent">
+      <main className="flex min-h-screen w-full bg-green-600">
         <div className="flex w-full flex-row gap-12">
           <div className="flex w-full items-center justify-center gap-[5.5rem]">
             <Group />
@@ -52,7 +52,7 @@ export default function Home({
               <div className="mt-20">
                 <Group />
               </div>
-              <h1 className="mx-3 pt-5 text-center text-4xl font-bold text-white">
+              <h1 className="mx-3 pt-5 text-center text-5xl font-bold text-white">
                 0-0
               </h1>
               <div className="mt-20">
