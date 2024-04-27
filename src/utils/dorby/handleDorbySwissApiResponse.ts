@@ -711,31 +711,210 @@ export const handleDorbySwissApiResponse = (
         id: "2-2",
         matches: [
           {
-            name: googleSheetRows?.[8]?.[17] ?? "",
+            name: googleSheetRows?.[1]?.[16] ?? "",
             players: [
               {
-                name: googleSheetRows?.[9]?.[18] ?? "",
-                place: googleSheetRows?.[9]?.[19] ?? "",
+                name: googleSheetRows?.[3]?.[16] ?? "",
+                place: googleSheetRows?.[3]?.[17] ?? "",
               },
               {
-                name: googleSheetRows?.[10]?.[18] ?? "",
-                place: googleSheetRows?.[10]?.[19] ?? "",
+                name: googleSheetRows?.[4]?.[16] ?? "",
+                place: googleSheetRows?.[4]?.[17] ?? "",
               },
               {
-                name: googleSheetRows?.[11]?.[18] ?? "",
-                place: googleSheetRows?.[11]?.[19] ?? "",
+                name: googleSheetRows?.[5]?.[16] ?? "",
+                place: googleSheetRows?.[5]?.[17] ?? "",
               },
               {
-                name: googleSheetRows?.[12]?.[18] ?? "",
-                place: googleSheetRows?.[12]?.[19] ?? "",
+                name: googleSheetRows?.[6]?.[16] ?? "",
+                place: googleSheetRows?.[6]?.[17] ?? "",
               },
               {
-                name: googleSheetRows?.[13]?.[18] ?? "",
-                place: googleSheetRows?.[13]?.[19] ?? "",
+                name: googleSheetRows?.[7]?.[16] ?? "",
+                place: googleSheetRows?.[7]?.[17] ?? "",
               },
               {
-                name: googleSheetRows?.[14]?.[18] ?? "",
-                place: googleSheetRows?.[14]?.[19] ?? "",
+                name: googleSheetRows?.[8]?.[16] ?? "",
+                place: googleSheetRows?.[8]?.[17] ?? "",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        id: "2-2",
+        matches: [
+          {
+            name: googleSheetRows?.[11]?.[16] ?? "",
+            players: [
+              {
+                name: googleSheetRows?.[13]?.[16] ?? "",
+                place: googleSheetRows?.[13]?.[17] ?? "",
+              },
+              {
+                name: googleSheetRows?.[14]?.[16] ?? "",
+                place: googleSheetRows?.[14]?.[17] ?? "",
+              },
+              {
+                name: googleSheetRows?.[15]?.[16] ?? "",
+                place: googleSheetRows?.[15]?.[17] ?? "",
+              },
+              {
+                name: googleSheetRows?.[16]?.[16] ?? "",
+                place: googleSheetRows?.[16]?.[17] ?? "",
+              },
+              {
+                name: googleSheetRows?.[17]?.[16] ?? "",
+                place: googleSheetRows?.[17]?.[17] ?? "",
+              },
+              {
+                name: googleSheetRows?.[18]?.[16] ?? "",
+                place: googleSheetRows?.[18]?.[17] ?? "",
+              },
+            ],
+          },
+          {
+            name: googleSheetRows?.[20]?.[16] ?? "",
+            players: [
+              {
+                name: googleSheetRows?.[22]?.[16] ?? "",
+                place: googleSheetRows?.[22]?.[17] ?? "",
+              },
+              {
+                name: googleSheetRows?.[23]?.[16] ?? "",
+                place: googleSheetRows?.[23]?.[17] ?? "",
+              },
+              {
+                name: googleSheetRows?.[24]?.[16] ?? "",
+                place: googleSheetRows?.[24]?.[17] ?? "",
+              },
+              {
+                name: googleSheetRows?.[25]?.[16] ?? "",
+                place: googleSheetRows?.[25]?.[17] ?? "",
+              },
+              {
+                name: googleSheetRows?.[26]?.[16] ?? "",
+                place: googleSheetRows?.[26]?.[17] ?? "",
+              },
+              {
+                name: googleSheetRows?.[27]?.[16] ?? "",
+                place: googleSheetRows?.[27]?.[17] ?? "",
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  };
+  const sixthRound: Round = {
+    matchGroups: [
+      {
+        id: "2-2",
+        matches: [
+          {
+            name: googleSheetRows?.[1]?.[20] ?? "",
+            players: [
+              {
+                name: googleSheetRows?.[3]?.[20] ?? "",
+                place: googleSheetRows?.[3]?.[21] ?? "",
+              },
+              {
+                name: googleSheetRows?.[4]?.[20] ?? "",
+                place: googleSheetRows?.[4]?.[21] ?? "",
+              },
+              {
+                name: googleSheetRows?.[5]?.[20] ?? "",
+                place: googleSheetRows?.[5]?.[21] ?? "",
+              },
+              {
+                name: googleSheetRows?.[6]?.[20] ?? "",
+                place: googleSheetRows?.[6]?.[21] ?? "",
+              },
+              {
+                name: googleSheetRows?.[7]?.[20] ?? "",
+                place: googleSheetRows?.[7]?.[21] ?? "",
+              },
+              {
+                name: googleSheetRows?.[8]?.[20] ?? "",
+                place: googleSheetRows?.[8]?.[21] ?? "",
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  };
+  const standings: Round = {
+    matchGroups: [
+      {
+        id: "2-2",
+        matches: [
+          {
+            name: googleSheetRows?.[10]?.[24] ?? "",
+            players: [
+              {
+                name: googleSheetRows?.[12]?.[24] ?? "",
+                place: googleSheetRows?.[12]?.[25] ?? "",
+              },
+              {
+                name: googleSheetRows?.[13]?.[24] ?? "",
+                place: googleSheetRows?.[13]?.[25] ?? "",
+              },
+              {
+                name: googleSheetRows?.[14]?.[24] ?? "",
+                place: googleSheetRows?.[14]?.[25] ?? "",
+              },
+              {
+                name: googleSheetRows?.[15]?.[24] ?? "",
+                place: googleSheetRows?.[15]?.[25] ?? "",
+              },
+              {
+                name: googleSheetRows?.[16]?.[24] ?? "",
+                place: googleSheetRows?.[16]?.[25] ?? "",
+              },
+              {
+                name: googleSheetRows?.[17]?.[24] ?? "",
+                place: googleSheetRows?.[17]?.[25] ?? "",
+              },
+              {
+                name: googleSheetRows?.[18]?.[24] ?? "",
+                place: googleSheetRows?.[18]?.[25] ?? "",
+              },
+              {
+                name: googleSheetRows?.[19]?.[24] ?? "",
+                place: googleSheetRows?.[19]?.[25] ?? "",
+              },
+              {
+                name: googleSheetRows?.[20]?.[24] ?? "",
+                place: googleSheetRows?.[20]?.[25] ?? "",
+              },
+              {
+                name: googleSheetRows?.[21]?.[24] ?? "",
+                place: googleSheetRows?.[21]?.[25] ?? "",
+              },
+              {
+                name: googleSheetRows?.[22]?.[24] ?? "",
+                place: googleSheetRows?.[22]?.[25] ?? "",
+              },
+              {
+                name: googleSheetRows?.[23]?.[24] ?? "",
+                place: googleSheetRows?.[23]?.[25] ?? "",
+              },
+              {
+                name: googleSheetRows?.[24]?.[24] ?? "",
+                place: googleSheetRows?.[24]?.[25] ?? "",
+              },
+              {
+                name: googleSheetRows?.[25]?.[24] ?? "",
+                place: googleSheetRows?.[25]?.[25] ?? "",
+              },
+              {
+                name: googleSheetRows?.[26]?.[24] ?? "",
+                place: googleSheetRows?.[26]?.[25] ?? "",
+              },
+              {
+                name: googleSheetRows?.[27]?.[24] ?? "",
+                place: googleSheetRows?.[27]?.[25] ?? "",
               },
             ],
           },
@@ -745,5 +924,13 @@ export const handleDorbySwissApiResponse = (
   };
 
   // return [firstRound, secondRound, thirdRound, fourthRound, fifthRound];
-  return [firstRound, secondRound, thirdRound, fourthRound];
+  return [
+    firstRound,
+    secondRound,
+    thirdRound,
+    fourthRound,
+    fifthRound,
+    sixthRound,
+    standings,
+  ];
 };

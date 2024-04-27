@@ -19,7 +19,7 @@ export async function getServerSideProps() {
   const queryClient = new QueryClient();
 
   await queryClient.prefetchQuery({
-    queryKey: ["swiss-dorby-rounds-r4"],
+    queryKey: ["swiss-dorby-rounds-r6"],
     queryFn: async () =>
       await getGoogleSheetData({ type: SheetType.SWISS, comp: Comps.DORBY }),
   });
@@ -35,7 +35,7 @@ export default function Home({
   dehydratedState,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const { data } = useQuery({
-    queryKey: ["swiss-dorby-rounds-r4"],
+    queryKey: ["swiss-dorby-rounds-r6"],
     queryFn: async () => {
       const response = await axios.get<Round[]>("/api/googleSheet", {
         params: {
@@ -50,9 +50,7 @@ export default function Home({
 
   if (!data) return null;
 
-  const decider = data[3]?.matchGroups[0]?.matches;
-  const secondMatch = data[3]?.matchGroups[1]?.matches;
-  const thirdMatch = data[3]?.matchGroups[2]?.matches;
+  const decider = data[5]?.matchGroups[0]?.matches;
 
   return (
     <HydrationBoundary state={dehydratedState}>
@@ -63,33 +61,13 @@ export default function Home({
       </Head>
       <main className="flex min-h-screen w-full bg-transparent">
         <div className="flex w-full flex-row gap-12">
-          <div className="flex w-full items-end justify-center gap-[12.5rem]">
-            <div className="flex flex-col gap-5">
-              <div className="flex gap-40">
-                <div className="flex flex-col">
-                  <h1 className="mb-2 text-center text-5xl font-bold text-white">
-                    2-1
-                  </h1>
-                  <div className="flex gap-8">
-                    <Match match={secondMatch?.[0]} big />
-                    <Match match={secondMatch?.[1]} big />
-                  </div>
-                </div>
-                <div className="flex flex-col">
-                  <h1 className="mb-2 text-center text-5xl font-bold text-white">
-                    1-2
-                  </h1>
-                  <div className="flex gap-8">
-                    <Match match={thirdMatch?.[0]} big />
-                    <Match match={thirdMatch?.[1]} big />
-                  </div>
-                </div>
-              </div>
-              <div className="mb-5 flex flex-col items-center gap-4">
-                <h1 className="text-center text-5xl font-bold text-white">
-                  3-0 DECIDER
-                </h1>
-                <Match match={decider?.[0]} />
+          <div className="flex w-full items-center justify-center gap-[12.5rem]">
+            <div className="flex flex-col">
+              <h1 className="mb-5 text-center text-5xl font-bold text-white">
+                3-2 <b>DECIDER</b>
+              </h1>
+              <div className="flex gap-8">
+                <Match match={decider?.[0]} big />
               </div>
             </div>
           </div>

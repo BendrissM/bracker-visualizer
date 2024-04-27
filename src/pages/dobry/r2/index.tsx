@@ -13,13 +13,13 @@ import axios from "axios";
 import { type InferGetServerSidePropsType } from "next";
 import Head from "next/head";
 
-// const intervalMs = 5 * 1000;
+const intervalMs = 6 * 1000;
 
 export async function getServerSideProps() {
   const queryClient = new QueryClient();
 
   await queryClient.prefetchQuery({
-    queryKey: ["swiss-dorby-rounds"],
+    queryKey: ["swiss-dorby-rounds-r2"],
     queryFn: async () =>
       await getGoogleSheetData({ type: SheetType.SWISS, comp: Comps.DORBY }),
   });
@@ -35,7 +35,7 @@ export default function Home({
   dehydratedState,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const { data } = useQuery({
-    queryKey: ["swiss-dorby-rounds"],
+    queryKey: ["swiss-dorby-rounds-r2"],
     queryFn: async () => {
       const response = await axios.get<Round[]>("/api/googleSheet", {
         params: {
@@ -45,7 +45,7 @@ export default function Home({
       });
       return response.data;
     },
-    // refetchInterval: intervalMs,
+    refetchInterval: intervalMs,
   });
 
   if (!data) return null;
