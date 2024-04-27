@@ -13,7 +13,7 @@ export const getCountryCode = (name: string): string => {
       return "MA";
     case "Trident":
       return "ZA";
-
+ 
     default:
       return "";
   }

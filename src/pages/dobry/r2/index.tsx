@@ -1,6 +1,6 @@
 import Match from "@/components/dorby/match";
 import { getGoogleSheetData } from "@/services/googleSheetService";
-import { Comps} from "@/types";
+import { Comps } from "@/types";
 import type { Round } from "@/types";
 import { SheetType } from "@/types/SheetType";
 import {
@@ -34,23 +34,24 @@ export async function getServerSideProps() {
 export default function Home({
   dehydratedState,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
-    const { data } = useQuery({
-      queryKey: ["swiss-dorby-rounds"],
-      queryFn: async () => {
-        const response = await axios.get<Round[]>("/api/googleSheet", {
-          params: {
-            type: SheetType.SWISS,
-            comp: Comps.DORBY,
-          },
-        });
-        return response.data;
-      },
-      // refetchInterval: intervalMs,
-    });
-  
+  const { data } = useQuery({
+    queryKey: ["swiss-dorby-rounds"],
+    queryFn: async () => {
+      const response = await axios.get<Round[]>("/api/googleSheet", {
+        params: {
+          type: SheetType.SWISS,
+          comp: Comps.DORBY,
+        },
+      });
+      return response.data;
+    },
+    // refetchInterval: intervalMs,
+  });
+
   if (!data) return null;
-  
-  const firstMatch = data[0]?.matchGroups[0]?.matches;
+
+  const firstMatch = data[1]?.matchGroups[0]?.matches;
+  const secondMatch = data[1]?.matchGroups[1]?.matches;
 
   return (
     <HydrationBoundary state={dehydratedState}>
@@ -61,31 +62,36 @@ export default function Home({
       </Head>
       <main className="flex min-h-screen w-full bg-transparent">
         <div className="flex w-full flex-row gap-12">
-          <div className="flex w-full items-center justify-center gap-[5.5rem]">
-            <div className="flex flex-col gap-8">
-              <Match match={firstMatch?.[0]} />
-              <Match match={firstMatch?.[1]} />
-            </div>
-            <div className="flex">
-              <div className="mt-20">
+          <div className="flex w-full items-center justify-center gap-[15.5rem]">
+            <div className="flex gap-16">
+              <div className="flex flex-col gap-8">
+                <Match match={firstMatch?.[0]} />
+                <Match match={firstMatch?.[1]} />
+              </div>
+              <div className="mt-2">
                 <div className="flex flex-col gap-8">
+                  <h1 className="text-left text-5xl font-bold text-white">
+                    1-0
+                  </h1>
                   <Match match={firstMatch?.[2]} />
                   <Match match={firstMatch?.[3]} />
                 </div>
               </div>
-              <h1 className="mx-3 pt-5 text-center text-5xl font-bold text-white">
-                0-0
-              </h1>
-              <div className="mt-20">
+            </div>
+            <div className="flex gap-16">
+              <div className="mt-2">
                 <div className="flex flex-col gap-8">
-                  <Match match={firstMatch?.[4]} />
-                  <Match match={firstMatch?.[5]} />
+                  <h1 className="text-right text-5xl font-bold text-white">
+                    0-1
+                  </h1>
+                  <Match match={secondMatch?.[0]} />
+                  <Match match={secondMatch?.[1]} />
                 </div>
               </div>
-            </div>
-            <div className="flex flex-col gap-8">
-              <Match match={firstMatch?.[6]} />
-              <Match match={firstMatch?.[7]} />
+              <div className="flex flex-col gap-8">
+                <Match match={secondMatch?.[2]} />
+                <Match match={secondMatch?.[3]} />
+              </div>
             </div>
           </div>
         </div>

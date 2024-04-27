@@ -1,5 +1,6 @@
 import RoundComponent from "@/components/bracketRound";
 import { getGoogleSheetData } from "@/services/googleSheetService";
+import { Comps } from "@/types";
 import type { Round } from "@/types/Round";
 import { SheetType } from "@/types/SheetType";
 import {
@@ -19,7 +20,7 @@ export async function getServerSideProps() {
 
   await queryClient.prefetchQuery({
     queryKey: ["bracket"],
-    queryFn: async () => await getGoogleSheetData({ type: SheetType.BRACKET }),
+    queryFn: async () => await getGoogleSheetData({ type: SheetType.BRACKET, comp: Comps.MEATC }),
   });
 
   return {
@@ -38,6 +39,7 @@ export default function Bracket({
       const response = await axios.get<Round<SheetType.BRACKET>[]>("/api/googleSheet", {
         params: {
           type: SheetType.BRACKET,
+          comp: Comps.MEATC,
         },
       });
       return response.data;
