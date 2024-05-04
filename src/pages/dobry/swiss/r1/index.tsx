@@ -13,7 +13,7 @@ import axios from "axios";
 import { type InferGetServerSidePropsType } from "next";
 import Head from "next/head";
 
-const intervalMs = 6 * 1000;
+// const intervalMs = 6 * 1000;
 
 export async function getServerSideProps() {
   const queryClient = new QueryClient();
@@ -45,7 +45,7 @@ export default function Home({
         });
         return response.data;
       },
-      refetchInterval: intervalMs,
+      // refetchInterval: intervalMs,
     });
   
   if (!data) return null;

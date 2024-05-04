@@ -2,6 +2,7 @@ import { Comps } from "@/types";
 import type { Round } from "@/types/Round";
 import { SheetType } from "@/types/SheetType";
 import { handleBracketApiResponse, handleSwissApiResponse } from "@/utils";
+import { handleDorbyBracketApiResponse } from "@/utils/dorby/handleDorbyBracketApiResponse";
 import { handleDorbySwissApiResponse } from "@/utils/dorby/handleDorbySwissApiResponse";
 import { google } from "googleapis";
 
@@ -27,8 +28,8 @@ const rangeMap = {
       sheetName: "Playoff Double Elimination!",
     },
     [Comps.DORBY]: {
-      range: "E23:W46",
-      sheetName: "Bracket Rounds",
+      range: "G3:AF31",
+      sheetName: "Playoff!",
     },
   },
 };
@@ -40,7 +41,7 @@ const responseHandlerMap = {
   },
   [SheetType.BRACKET]: {
     [Comps.MEATC]: handleBracketApiResponse,
-    [Comps.DORBY]: handleBracketApiResponse,
+    [Comps.DORBY]: handleDorbyBracketApiResponse,
   },
 };
 

@@ -8,5 +8,5 @@ export const mapPlacementText = (place: string): string => {
   if (place === "3") {
     return "3rd";
   }
-  return `${place}th`;
+  return isNaN(+place) ? place : `${place}th`;
 };
