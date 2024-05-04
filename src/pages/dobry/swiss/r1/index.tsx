@@ -63,14 +63,14 @@ export default function Home({
         <div className="flex w-full flex-row gap-12">
           <div className="flex w-full items-center justify-center gap-[5.5rem]">
             <div className="flex flex-col gap-8">
-              <Match match={firstMatch?.[0]} />
-              <Match match={firstMatch?.[1]} />
+              <Match match={firstMatch?.[0]} group="swiss" />
+              <Match match={firstMatch?.[1]} group="swiss" />
             </div>
             <div className="flex">
               <div className="mt-20">
                 <div className="flex flex-col gap-8">
-                  <Match match={firstMatch?.[2]} />
-                  <Match match={firstMatch?.[3]} />
+                  <Match match={firstMatch?.[2]} group="swiss" />
+                  <Match match={firstMatch?.[3]} group="swiss" />
                 </div>
               </div>
               <h1 className="mx-3 pt-5 text-center text-5xl font-bold text-white">
@@ -78,14 +78,14 @@ export default function Home({
               </h1>
               <div className="mt-20">
                 <div className="flex flex-col gap-8">
-                  <Match match={firstMatch?.[4]} />
-                  <Match match={firstMatch?.[5]} />
+                  <Match match={firstMatch?.[4]} group="swiss" />
+                  <Match match={firstMatch?.[5]} group="swiss" />
                 </div>
               </div>
             </div>
             <div className="flex flex-col gap-8">
-              <Match match={firstMatch?.[6]} />
-              <Match match={firstMatch?.[7]} />
+              <Match match={firstMatch?.[6]} group="swiss" />
+              <Match match={firstMatch?.[7]} group="swiss" />
             </div>
           </div>
         </div>

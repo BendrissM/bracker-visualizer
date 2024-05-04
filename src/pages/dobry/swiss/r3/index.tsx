@@ -13,7 +13,7 @@ import axios from "axios";
 import { type InferGetServerSidePropsType } from "next";
 import Head from "next/head";
 
-const intervalMs = 6 * 1000;
+// const intervalMs = 6 * 1000;
 
 export async function getServerSideProps() {
   const queryClient = new QueryClient();
@@ -45,7 +45,7 @@ export default function Home({
       });
       return response.data;
     },
-    refetchInterval: intervalMs,
+    // refetchInterval: intervalMs,
   });
 
   if (!data) return null;
@@ -69,15 +69,15 @@ export default function Home({
                 2-0
               </h1>
               <div className="flex flex-col gap-8">
-                <Match match={firstMatch?.[0]} />
-                <Match match={firstMatch?.[1]} />
+                <Match match={firstMatch?.[0]} group="swiss" />
+                <Match match={firstMatch?.[1]} group="swiss" />
               </div>
             </div>
             <div className="flex">
               <div className="mt-36">
                 <div className="flex flex-col gap-8">
-                  <Match match={secondMatch?.[0]} />
-                  <Match match={secondMatch?.[1]} />
+                  <Match match={secondMatch?.[0]} group="swiss" />
+                  <Match match={secondMatch?.[1]} group="swiss" />
                 </div>
               </div>
               <h1 className="mt-20 text-right text-5xl font-bold text-white">
@@ -85,8 +85,8 @@ export default function Home({
               </h1>
               <div className="mt-36">
                 <div className="flex flex-col gap-8">
-                  <Match match={secondMatch?.[2]} />
-                  <Match match={secondMatch?.[3]} />
+                  <Match match={secondMatch?.[2]} group="swiss" />
+                  <Match match={secondMatch?.[3]} group="swiss" />
                 </div>
               </div>
             </div>
@@ -95,8 +95,8 @@ export default function Home({
                 0-2
               </h1>
               <div className="flex flex-col gap-8">
-                <Match match={thirdMatch?.[0]} />
-                <Match match={thirdMatch?.[1]} />
+                <Match match={thirdMatch?.[0]} group="swiss" />
+                <Match match={thirdMatch?.[1]} group="swiss" />
               </div>
             </div>
           </div>

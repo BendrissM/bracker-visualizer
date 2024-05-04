@@ -13,7 +13,7 @@ import axios from "axios";
 import { type InferGetServerSidePropsType } from "next";
 import Head from "next/head";
 
-const intervalMs = 6 * 1000;
+// const intervalMs = 6 * 1000;
 
 export async function getServerSideProps() {
   const queryClient = new QueryClient();
@@ -45,7 +45,7 @@ export default function Home({
       });
       return response.data;
     },
-    refetchInterval: intervalMs,
+    // refetchInterval: intervalMs,
   });
 
   if (!data) return null;
@@ -71,8 +71,8 @@ export default function Home({
                     2-1
                   </h1>
                   <div className="flex gap-8">
-                    <Match match={secondMatch?.[0]} big />
-                    <Match match={secondMatch?.[1]} big />
+                    <Match match={secondMatch?.[0]} group="swiss" big />
+                    <Match match={secondMatch?.[1]} group="swiss" big />
                   </div>
                 </div>
                 <div className="flex flex-col">
@@ -80,8 +80,8 @@ export default function Home({
                     1-2
                   </h1>
                   <div className="flex gap-8">
-                    <Match match={thirdMatch?.[0]} big />
-                    <Match match={thirdMatch?.[1]} big />
+                    <Match match={thirdMatch?.[0]} group="swiss" big />
+                    <Match match={thirdMatch?.[1]} group="swiss" big />
                   </div>
                 </div>
               </div>
@@ -89,7 +89,7 @@ export default function Home({
                 <h1 className="text-center text-5xl font-bold text-white">
                   3-0 DECIDER
                 </h1>
-                <Match match={decider?.[0]} />
+                <Match match={decider?.[0]} group="swiss" />
               </div>
             </div>
           </div>
