@@ -46,7 +46,7 @@ export const getCountryCode = (name: string): string => {
       return "GB";
 
     case "TiMMYS..":
-      return "US";
+      return "NL";
 
     case "iFendar":
       return "SV";
